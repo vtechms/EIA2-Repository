@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Feuerwerk</title>
+    <! -- Definiert styles der HTML-Elemente mit CSS. -->
+    <style>
+        /* Definiert style des body.*/
+        /* Zwischen body und Browser-Fenster ist kleiner Rand,*/
+        /* durch Setzen von margin:0 hat Rand Breite von 0.*/
+        body {
+            margin:0;
+        }
+    </style>
+</head>
+  <body>
+    <canvas></canvas>
+            <!-- Formular Start-->
+            <form id="form1_id">
+              <div id="form_id">
+                  <h2>Baue deine Rakete</h2>
+                  <!-- Fieldset zeichnet eine Box um Element -->
+                  <fieldset>
+                    <legend>Raketen aus mongoDB laden</legend>
+                    <select name="LadenAusDB" id="ausdbladen_id">
+                        <option value='{ "laden_name":"Nein", "aus_db":false}'>Nein</option>
+                        <option value='{ "laden_name":"Ja", "aus_db":true}'>Ja</option>
+                    </select>
+                </fieldset>
+                  <fieldset>
+                      <legend>Farbe</legend>
+                      <select name="Farbe" id="farbe_id">
+                          <option value='{ "farb_name":"Farbenmix", "farb_code":"Zufall"}'>Farbenmix</option>
+                          <option value='{ "farb_name":"Heliotrop", "farb_code":"#D852FA"}'>Heliotrop</option>
+                          <option value='{ "farb_name":"Kornblumenblau", "farb_code":"#6E7DE6"}'>Kornblumenblau</option>
+                          <option value='{ "farb_name":"Babyblau", "farb_code":"#5AFAF7"}'>Babyblau</option>
+                          <option value='{ "farb_name":"Pastellgrün", "farb_code":"#65E668"}'>Pastellgrün</option>
+                          <option value='{ "farb_name":"Kanariengelb", "farb_code":"#FFFB9E"}'>Kanariengelb</option>
+                      </select>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Explosionskraft</legend>
+                    <select name="Explosionskraft" id="explosionskraft_id">
+                        <option value='{ "explosionskraft_name":"klein", "ex_kraft":4}'>4</option>
+                        <option value='{ "explosionskraft_name":"mittel", "ex_kraft":6}'>6</option>
+                        <option value='{ "explosionskraft_name":"gross", "ex_kraft":8}'>8</option>
+                        <option value='{ "explosionskraft_name":"sehr groß", "ex_kraft":10}'>10</option>
+                        <option value='{ "explosionskraft_name":"extrem", "ex_kraft":20}'>20</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                  <legend>Funkengröße</legend>
+                  <select name="Funkengroesse" id="funkengroesse_id">
+                      <option value='{ "funkengroesse_name":"klein", "funk_groesse":2}'>2</option>
+                      <option value='{ "funkengroesse_name":"mittel", "funk_groesse":4}'>4</option>
+                      <option value='{ "funkengroesse_name":"groß", "funk_groesse":6}'>6</option>
+                  </select>
+              </fieldset>
+              <fieldset>
+                <legend>Funkenanzahl</legend>
+                <select name="Funkenanzahl" id="funkenanzahl_id">
+                    <option value='{ "funkenanzahl_name":"wenig", "funk_anzahl":200}'>200</option>
+                    <option value='{ "funkenanzahl_name":"mittel", "funk_anzahl":400}'>400</option>
+                    <option value='{ "funkenanzahl_name":"viel", "funk_anzahl":800}'>800</option>
+                </select>
+            </fieldset>
+              </div>
+          </form>
+  
+          
+          <div>
+              <h2>Auswahl</h2>
+              <div id="auswahl_id">
+                  ...
+              </div>
+          </div>
+          <br>
+          <div>
+          <button type="button" id="speichere_rakete_button_id">Speichere Rakete</button>
+          <button type="button" id="loesche_alle_raketen_button_id">Lösche alle gespeicherten Raketen</button>
+          </div>
+          <br>
+
+  <script src="feuerwerk_eia2.js"></script></body>
+</html>
